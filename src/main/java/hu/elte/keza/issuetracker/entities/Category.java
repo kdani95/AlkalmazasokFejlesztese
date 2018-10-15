@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
-@Table(name = "category")
+@Table(name = "categories")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,7 +29,7 @@ public class Category extends BaseEntity
     private String name;
     
     @JoinColumn(updatable = false)
-    @OneToMany(targetEntity = Category.class)
+    @OneToMany(targetEntity = Category.class, mappedBy = "category")
     private List<Item> items;
     
 }

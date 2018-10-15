@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = "item")
+@Table(name = "items")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
