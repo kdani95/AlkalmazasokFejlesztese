@@ -7,6 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerRepository extends CrudRepository<Item, Long> {
-    List<Item> findAllByCreatedBy(Customer user);
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }

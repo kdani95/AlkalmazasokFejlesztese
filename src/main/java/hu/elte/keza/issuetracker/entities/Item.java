@@ -1,5 +1,6 @@
 package hu.elte.keza.issuetracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -25,7 +26,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Item extends BaseWithCreatedInfo implements Serializable
+public class Item extends BaseWithCreatedInfo
 {   
     @Column
     @NotNull
@@ -55,8 +56,9 @@ public class Item extends BaseWithCreatedInfo implements Serializable
     @Column
     private boolean active;
     
+    @JsonIgnore
     @JoinColumn(updatable = false)
     @ManyToOne(targetEntity = Category.class)
-    private Category category;
+    private Category cat;
 
 }

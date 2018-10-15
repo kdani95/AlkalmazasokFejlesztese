@@ -37,9 +37,6 @@ public class Customer extends BaseEntity implements Serializable{
     @NotNull
     @Column
     private String emailAddress;
-    
-    @JsonIgnore
-    @OneToMany(targetEntity = Item.class, mappedBy = "name")
-    private List<Item> items;
+
     
 }

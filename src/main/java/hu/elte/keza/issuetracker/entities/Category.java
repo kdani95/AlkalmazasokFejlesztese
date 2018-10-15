@@ -22,14 +22,13 @@ import org.hibernate.annotations.CreationTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Category extends BaseEntity
+public class Category extends BaseWithCreatedInfo
 {
     @NotNull
     @Column
     private String name;
     
-    @JoinColumn(updatable = false)
-    @OneToMany(targetEntity = Category.class, mappedBy = "category")
+    @OneToMany(targetEntity = Category.class, mappedBy = "createdBy")
     private List<Item> items;
     
 }
