@@ -32,3 +32,4 @@ public abstract class BaseWithCreatedInfo extends BaseEntity implements Comparab
         return result;
     }
 }
+ 

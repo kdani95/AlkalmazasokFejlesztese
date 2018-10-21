@@ -1,6 +1,6 @@
 package hu.elte.keza.issuetracker.controllers;
 
-import hu.elte.keza.issuetracker.entities.Item;
+import hu.elte.keza.issuetracker.entities.ShopItem;
 import hu.elte.keza.issuetracker.entities.Category;
 import java.util.Optional;
 import org.springframework.http.ResponseEntity;
@@ -16,14 +16,14 @@ public class CategoryController extends BaseController<Category, CategoryReposit
 {
    
     @GetMapping("/{id}/items")
-    public ResponseEntity<Iterable<Item>> items(@PathVariable Long id)
+    public ResponseEntity<Iterable<ShopItem>> items(@PathVariable Long id)
     {
         Optional<Category> oCategory = getEntity(id);
         if (oCategory.isPresent())
         {
             return ResponseEntity.ok( oCategory.get().getItems());
         }
-        
         return ResponseEntity.notFound().build();
     }
+
 }

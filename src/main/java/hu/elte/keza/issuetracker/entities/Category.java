@@ -1,6 +1,9 @@
 package hu.elte.keza.issuetracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 import javax.persistence.Column;
@@ -22,13 +25,13 @@ import org.hibernate.annotations.CreationTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Category extends BaseWithCreatedInfo
+public class Category extends BaseWithCreatedInfo implements Serializable
 {
     @NotNull
     @Column
     private String name;
     
-    @OneToMany(targetEntity = Category.class, mappedBy = "createdBy")
-    private List<Item> items;
+    @OneToMany(targetEntity = ShopItem.class, mappedBy = "category")
+    private List<ShopItem> items;
     
 }
