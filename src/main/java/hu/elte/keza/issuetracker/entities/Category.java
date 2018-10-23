@@ -25,7 +25,7 @@ import org.hibernate.annotations.CreationTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Category extends BaseWithCreatedInfo implements Serializable
+public class Category extends BaseEntity implements Serializable
 {
     @NotNull
     @Column

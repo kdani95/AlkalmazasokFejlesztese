@@ -25,5 +25,7 @@ public class CategoryController extends BaseController<Category, CategoryReposit
         }
         return ResponseEntity.notFound().build();
     }
+    
+    
 
 }

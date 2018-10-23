@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("issues")
+@RequestMapping("categories")
 @RestController
 public abstract class BaseController<
         T extends BaseEntity, 
