@@ -38,5 +38,6 @@ public class Customer extends BaseEntity implements Serializable{
     @Column
     private String emailAddress;
 
-    
+    @OneToMany(targetEntity = Order.class, mappedBy = "customer")
+    private List<Order> orders;
 }

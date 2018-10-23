@@ -64,5 +64,8 @@ public class ShopItem extends BaseEntity implements Serializable
     @JsonIgnore
     private Category category;
     
+    @OneToMany(targetEntity = Order.class, mappedBy = "item")
+    @JsonIgnore
+    private List<Order> orders;
 
 }
