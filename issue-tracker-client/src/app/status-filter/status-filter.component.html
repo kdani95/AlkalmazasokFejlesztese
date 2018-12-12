@@ -1,0 +1,25 @@
+<!-- (change)="selectedStatus = group.value" -->
+<!-- (change)="onFilterChange(group.value)" -->
+<mat-button-toggle-group
+  (change)="onFilterChange(group.value)"
+  [value]="selectedCategory"
+  #group="matButtonToggleGroup"
+>
+  <mat-button-toggle value="">
+    Minden
+  </mat-button-toggle>
+  <mat-button-toggle value="Kitchen">
+    Konyhai eszközök
+  </mat-button-toggle>
+  <mat-button-toggle value="Computer">
+    Számítástechnika
+  </mat-button-toggle>
+  <mat-button-toggle value="Fun">
+    Szórakoztató elektronika
+  </mat-button-toggle>
+  <mat-button-toggle value="{{status}}"
+    *ngFor="let status of statuses">
+    {{ status }}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
