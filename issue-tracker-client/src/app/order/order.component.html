@@ -1,0 +1,11 @@
+<h2>Kosár</h2>
+
+<mat-nav-list ng-controller="filterOrders">
+  <a mat-list-item *ngFor="let order of filteredOrders" 
+      (click)="onSelected(order.id)"
+      >
+        <h2 matLine>{{order.item.name}}  </h2 >
+        <p matLine>{{order.item.description}}</p >
+        <p matLine>{{order.item.nettPrice}}-ft</p >
+      </a>
+</mat-nav-list>

@@ -1,0 +1,15 @@
+<h2>Árucikkek</h2>
+
+<status-filter [selectedCategory]="selectedCategory" (change)="onFilterChange($event)">
+</status-filter>
+
+<mat-nav-list>
+    <a mat-list-item *ngFor="let item of filteredItems" 
+      (click)="onSelected(item.id)"
+      >
+        <h2 matLine>{{item.name}}  </h2 >
+        <p matLine>{{item.description}}</p >
+        <p matLine>{{item.nettPrice}}-ft</p >
+        
+      </a>
+</mat-nav-list>
