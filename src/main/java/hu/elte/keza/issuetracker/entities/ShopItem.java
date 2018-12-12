@@ -61,7 +61,7 @@ public class ShopItem extends BaseEntity implements Serializable
     @NotNull
     @ManyToOne(targetEntity = Category.class)
     @JoinColumn(updatable = false)
-    @JsonIgnore
+    
     private Category category;
     
     @OneToMany(targetEntity = Order.class, mappedBy = "item")

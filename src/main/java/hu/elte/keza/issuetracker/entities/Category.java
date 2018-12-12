@@ -32,6 +32,7 @@ public class Category extends BaseEntity implements Serializable
     private String name;
     
     @OneToMany(targetEntity = ShopItem.class, mappedBy = "category")
+    @JsonIgnore
     private List<ShopItem> items;
     
 }

@@ -2,9 +2,9 @@ INSERT INTO customers (user_name, name, password, email_address) VALUES ('admin'
 INSERT INTO customers (user_name, name, password, email_address) VALUES ('zek', 'Peti', 'zek', 'zek@gmail.com');
 INSERT INTO customers (user_name, name, password, email_address) VALUES ('tomi', 'Károly', 'tomi', 'tomi@gmail.com');
 
-INSERT INTO categories (name) VALUES ('szórakoztató elektronika');
-INSERT INTO categories (name) VALUES ('számítástechnika');
-INSERT INTO categories (name) VALUES ('konyhai gépek');
+INSERT INTO categories (name) VALUES ('Fun');
+INSERT INTO categories (name) VALUES ('Computer');
+INSERT INTO categories (name) VALUES ('Kitchen');
 
 INSERT INTO items (category_id, name, manufacturer, type_number, description, nett_price, stock, active) VALUES (1,'YBoy', 'Macrohard', 12345, 'Ez egy nagyon jó játékkonzol!', 999999, 1, TRUE);
 INSERT INTO items (category_id, name, manufacturer, type_number, description, nett_price, stock, active) VALUES (2,'SPS', 'Szoni', 12212, 'Ez is egy nagyon jó játékkonzol!', 999999, 1, TRUE);
